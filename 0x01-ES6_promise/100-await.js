@@ -2,11 +2,14 @@ import { uploadPhoto, createUser } from './utils';
 
 export default async function asyncUploadUser() {
   try {
-    return await {
-      photo: (await uploadPhoto()) || null,
-      user: (await createUser()) || null,
+    return {
+      photo: (await uploadPhoto()),
+      user: (await createUser()),
     };
   } catch (err) {
-    return err.toString();
+    return {
+      photo: null,
+      user: null,
+    };
   }
 }
