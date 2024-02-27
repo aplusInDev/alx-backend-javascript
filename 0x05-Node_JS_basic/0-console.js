@@ -1,5 +1,5 @@
-function displayMessage(message) {
-  proccess.write(message + '\n');
-}
+const displayMessage = (msg) => {
+  console.log(msg);
+};
 
-model.exports = displayMessage;
+module.exports = displayMessage;
